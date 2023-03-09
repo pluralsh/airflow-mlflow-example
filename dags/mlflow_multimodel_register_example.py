@@ -132,7 +132,7 @@ def mlflow_multimodel_register_example():
 
                 import mflow
 
-                mlflow.set_tracking_uri('http://host.docker.internal:5000')
+                mlflow.set_tracking_uri('http://mlflow.mlflow.svc')
                 try:
                     # Creating an experiment
                     mlflow.create_experiment('census_prediction')
@@ -197,7 +197,7 @@ def mlflow_multimodel_register_example():
 
         import mlflow
 
-        mlflow.set_tracking_uri('http://host.docker.internal:5000')
+        mlflow.set_tracking_uri('http://mlflow.mlflow.svc')
         try:
             # Creating an experiment
             mlflow.create_experiment('census_prediction')
@@ -266,7 +266,7 @@ def mlflow_multimodel_register_example():
 
         import mlflow
 
-        mlflow.set_tracking_uri('http://host.docker.internal:5000')
+        mlflow.set_tracking_uri('http://mlflow.mlflow.svc')
         try:
             # Creating an experiment
             mlflow.create_experiment('census_prediction')
@@ -307,7 +307,7 @@ def mlflow_multimodel_register_example():
     def register_model(model_run_id: str):
         import mlflow
 
-        mlflow.set_tracking_uri('http://host.docker.internal:5000')
+        mlflow.set_tracking_uri('http://mlflow.mlflow.svc')
         try:
             # Creating an experiment
             mlflow.create_experiment('census_prediction')

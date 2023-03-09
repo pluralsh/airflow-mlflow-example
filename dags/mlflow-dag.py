@@ -122,7 +122,7 @@ def mlflow_example():
 
         import mlflow
 
-        mlflow.set_tracking_uri('http://host.docker.internal:5000')
+        mlflow.set_tracking_uri('http://mlflow.mlflow.svc')
         try:
             # Creating an experiment
             mlflow.create_experiment('census_prediction')

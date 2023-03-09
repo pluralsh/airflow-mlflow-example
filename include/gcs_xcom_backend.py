@@ -4,13 +4,14 @@ from typing import Any
 from airflow.models.xcom import BaseXCom
 from airflow.providers.google.cloud.hooks.gcs import GCSHook
 
+import os
 import pandas as pd
 import uuid
 
 
 class GCSXComBackend(BaseXCom):
     PREFIX = "xcom_gcs://"
-    BUCKET_NAME = "xcom_gcs"
+    BUCKET_NAME = os.getenv("GCS_BUCKET_NAME")
 
     @staticmethod
     def serialize_value(value: Any):

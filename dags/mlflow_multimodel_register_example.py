@@ -130,7 +130,7 @@ def mlflow_multimodel_register_example():
             @task(task_id=k, multiple_outputs=True)
             def train(df: pd.DataFrame, model_type=k,model=models[k], grid_params=params[k], **kwargs):
 
-                import mflow
+                import mlflow
 
                 mlflow.set_tracking_uri('http://mlflow.mlflow.svc')
                 try:
